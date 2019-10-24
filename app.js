@@ -7,12 +7,20 @@ var app = angular.module('app', [
 ]).run(function ($rootScope) {
     $rootScope.name = "AngluarJs smart";
     document.title = $rootScope.name;
+}).config(function ($provide, $compileProvider, $controllerProvider, $filterProvider) {
+    app.controller = $controllerProvider.register;
+    app.directive = $compileProvider.directive;
+    app.filter = $filterProvider.register;
+    app.factory = $provide.factory;
+    app.service = $provide.service;
+    app.constant = $provide.constant;
 }).config(function ($routeProvider) {
     $routeProvider.when('/page/:name', {
         templateUrl: function (attr) {
             toTemplate();
             return "page/" + attr.name + ".html";
-        }, resolve: {
+        },
+        resolve: {
             load: function ($q, $route, $rootScope) {
                 var deferred = $q.defer();
                 var params = $route.current.params;
