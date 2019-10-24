@@ -6,7 +6,6 @@ var app = angular.module('app', [
     'ngRoute'
 ]).run(function ($rootScope) {
     $rootScope.name = "AngluarJs smart";
-    document.title = $rootScope.name;
 }).config(function ($provide, $compileProvider, $controllerProvider, $filterProvider) {
     app.controller = $controllerProvider.register;
     app.directive = $compileProvider.directive;
@@ -35,8 +34,7 @@ var app = angular.module('app', [
                 return deferred.promise;
             }
         }
-    });
-    $routeProvider.when('/page/:dir/:name', {
+    }).when('/page/:dir/:name', {
         templateUrl: function (attr) {
             toTemplate();
             return "page/" + attr.dir + "/" + attr.name + ".html";
@@ -55,8 +53,7 @@ var app = angular.module('app', [
                 return deferred.promise;
             }
         }
-    });
-    $routeProvider.otherwise({
+    }).otherwise({
         redirectTo: '/page/home'
     });
 })

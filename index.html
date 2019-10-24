@@ -4,26 +4,26 @@
     <meta charset="UTF-8">
     <link rel="stylesheet" href="smart.css">
 </head>
-<body ng-app="app">
-<header style="background: #09f;">
-    <h1 class="ng-cloak title">{{name}}</h1>
-</header>
-<nav class="smart-nav">
-    <div>
+<body>
+<div ng-app="app">
+    <header style="background: #09f;">
+        <h1 class="ng-cloak title">{{name}}</h1>
+    </header>
+    <nav class="smart-nav">
         <ul>
             <li><a href="#!/page/home">Home</a></li>
             <li><a href="#!/page/about/about">About</a></li>
         </ul>
-    </div>
-</nav>
-<main ng-view style="min-height: 600px;padding: 10px;">
+    </nav>
+    <main ng-view style="min-height: 600px;padding: 10px;">
 
-</main>
-<footer style="background: #27ae60;">
-    <p style="text-align: center;color: #fff;padding: 10px 0;">
-        <a style="color: #fff" target="_blank" href="https://www.erupt.xyz">通用数据管理框架：www.erupt.xyz</a>
-    </p>
-</footer>
+    </main>
+    <footer style="background: #27ae60;">
+        <p style="text-align: center;padding: 10px 0;color: #fff;">
+            Java注解轻松搞定管理后台：<a style="color: #f1f1f1" target="_blank" href="https://www.erupt.xyz">www.erupt.xyz</a>
+        </p>
+    </footer>
+</div>
 <script src="https://cdn.bootcss.com/angular.js/1.7.8/angular.min.js"></script>
 <script src="https://cdn.bootcss.com/angular.js/1.7.8/angular-route.min.js"></script>
 <script src="assets/script.js"></script>
