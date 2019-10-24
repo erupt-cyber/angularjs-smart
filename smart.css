@@ -1,0 +1,56 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.ng-cloak {
+    display: none;
+}
+
+.title {
+    text-align: center;
+    color: #fff;
+    line-height: 100px
+}
+
+
+.smart-nav {
+    background: #333;
+}
+
+.smart-nav ul {
+    overflow: hidden;
+    list-style: none;
+    padding: 0;
+}
+
+.smart-nav ul li {
+    float: left;
+    width: 14.28%;
+    line-height: 50px;
+    text-align: center;
+    font-weight: 800;
+    color: #fff;
+    cursor: pointer;
+    transition: .5s all;
+}
+
+.smart-nav ul li a {
+    display: block;
+    color: inherit;
+    font-size: 17px;
+    line-height: 60px;
+}
+
+.smart-nav ul li a:hover, .smart-nav a:visited, .smart-nav li a:active, .smart-nav li a:focus {
+    text-decoration: none !important;
+}
+
+.smart-nav ul li:hover {
+    background: #fff;
+}
+
+.smart-nav li:hover a {
+    color: #000;
+}
