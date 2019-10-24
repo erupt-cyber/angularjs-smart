@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        .ng-cloak {
+            display: none;
+        }
+    </style>
+</head>
+<body ng-app="app">
+<header style="background: #09f;min-height: 100px;">
+    <h1 class="ng-cloak" style="text-align: center;color: #fff;line-height: 100px">{{name}}</h1>
+</header>
+<nav>
+    <a href="#!/page/home">home</a>
+    <a href="#!/page/about/about">about</a>
+</nav>
+<main>
+    <div style="border: 1px dashed #09f;min-height: 500px">
+        <div ng-view>
+
+        </div>
+    </div>
+</main>
+<footer style="background: #333;min-height: 100px;">
+
+</footer>
+<script src="https://cdn.bootcss.com/angular.js/1.7.8/angular.min.js"></script>
+<script src="https://cdn.bootcss.com/angular.js/1.7.8/angular-route.min.js"></script>
+<script src="assets/script.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
